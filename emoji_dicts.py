@@ -1,4 +1,4 @@
-celebrity_emojis = {
+celebrity_dict = {
     "🤱🚦 🚣 🐝": "Margot Robbie",
     "🐝🔛🌊": "Beyoncé",
     "🐻 👧👧": "Bear Grylls",
@@ -16,20 +16,92 @@ celebrity_emojis = {
     "🃏 🐝": "Cardi B"
 }
 
+world_city_dict = {
+    "🗣️🎶🐾" : "Singapore",
+    "🔩🔛": "Bolton",
+    "💥🍆": "Bangkok",
+    "🥫🐻": "Canberra",
+    "👹🚰": "Helsinki",
+    "🦶🔑0️⃣": "Tokyo",
+    "⬛ 🏊": "Blackpool",
+    "🚗🐂": "Kabul",
+    "🚢 👄": "Portsmouth",
+    "🔥": "Bern",
+    "🏅📥": "Medellín",
+    "😂🚐🅰️": "Havana",
+    "☀️ 😒👭🚘": "San Francisco",
+    "📖🅰️😴": "Bucharest",
+    "⛔️👘👁": "Nairobi"
+}
 
+movies_dict = {
+    "🍴🙏❤️": "Eat Pray Love",
+    "5️⃣0️⃣0️⃣☀️❤️": "500 Days of Summer",
+    "😈 👠": "The Devil Wears Prada",
+    "🚆👀": "Trainspotting",
+    "👨✂️👐": "Edward Scissorhands",
+    "🥊 ♣️": "Fight Club",
+    "🏰👭❄️☃️": "Frozen",
+    "👰👭💩": "Bridesmaids",
+    "🔎🐟": "Finding Nemo",
+    "👨⚡": "Harry Potter",
+    "🏝️🏐": "Castaway",
+    "👽📞🏠": "E.T.",
+    "🧙‍♂️🧝‍♀️💍🌋": "The Lord of the Rings",
+    "🐺🏦": "The Wolf of Wall Street",
+    "🎵🇫🇷😔": "Les Miserables"
+}
 
-# 🗣️🎶🐾
-# 🔩🔛
-# 💥🍆
-# 🥫🐻
-# 👹🚰
-# 🦶🔑0️⃣
-# ⬛ 🏊
-# 🚗🐂
-# 🚢 👄
-# 🔥
-# 🏅📥
-# 😂🚐🅰️
-# ☀️ 😒👭🚘
-# 📖🅰️😴
-# ⛔️👘👁
+tv_show_dict = {
+    "🇬🇧🍰": "The Great British Bake Off",
+    "🦑🎮": "Squid Game",
+    "💰🇪🇸": "Money Heist",
+    "⚰️2️⃣🙋": "Dead to Me",
+    "👻⛰️🏠": "The Haunting of Hill House",
+    "👑♟️👩‍🦰": "The Queen's Gambit",
+    "🇮🇪🚸👯": "Derry Girls",
+    "🍆🍑💦👩‍🏫": "Sex Education",
+    "🥵❤️🏝️💸": "Too Hot To Handle",
+    "👇🔛⛪": "Downton Abbey",
+    "🎲🏰🪑⚔️": "Game of Thrones",
+    "💬📱👧": "Gossip Girl",
+    "🛁👑🔔💨": "The Fresh Prince of Bel-Air",
+    "📞👶": "Call the Midwife",
+    "👩🏻👗📱🇫🇷": "Emily in Paris"
+}
+
+brands_dict = {
+    "⭐💰": "Starbucks",
+    "🔥🦊": "Firefox",
+    "⬆️🧭😊": "North Face",
+    "👨👨👨👨👨": "Five Guys",
+    "👛🌊🐷": "Percy Pig",
+    "🌮🔔": "Taco Bell",
+    "☁️☀️🌧🥄🥄": "Wetherspoons",
+    "🚫🔑": "Nokia",
+    "🔋🐰": "Energizer",
+    "👀📱": "iPhone",
+    "🐊": "Crocs",
+    "🌽❄️❄️": "Cornflakes",
+    "🪁🐱": "KitKat",
+    "🧸🫐": "Burberry",
+    "👁️🔑": "IKEA"
+}
+
+disney_dict = {
+    "🐒🪔🧞‍♂️": "Aladdin",
+    "🦁👑": "Lion King",
+    "👑🐸": "The Princess and the Frog",
+    "👶🧜🏽‍♀️": "The Little Mermaid",
+    "❄️☃️👩‍🦳": "Frozen",
+    "🧸📖": "Toy Story",
+    "👩🏻🐉🗡": "Mulan",
+    "😴👸🏼": "Sleeping Beauty",
+    "🔍🐟": "Finding Nemo",
+    "👸🏻🌹👹": "Beauty and the Beast",
+    "🐀👨‍🍳🍝": "Ratatouille",
+    "😀😭😡😱🤢": "Inside Out",
+    "🌻👑💇‍♀️": "Tangled",
+    "🌺💙👽": "Lilo and Stitch",
+    "🏺⚡️💪": "Hercules"
+}
