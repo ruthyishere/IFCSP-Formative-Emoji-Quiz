@@ -1,4 +1,5 @@
 # Stores the emojis and their answers!
+# Credits: Briggs, J., 2024, Cosmopolitan, Available at: https://www.cosmopolitan.com/uk/entertainment/quizzes-games/a38311108/emoji-quiz-questions/
 
 celebrity_dict = {
     "🤱🚦 🚣 🐝": "Margot Robbie",

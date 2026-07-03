@@ -2,6 +2,8 @@
 
 ## Welcome to The Emoji Quiz!!
 
+Cosmopolitan's Emoji quiz!!
+
 ### User Documentation
 ✨🌌💫 Instructions 🤍☁️🌿
 You will first get to choose which topics you'd like out of:
