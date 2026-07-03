@@ -17,15 +17,17 @@ def main():
     }
 
     choice_to_question_dict_map = {
-        "celebrities": celebrity_dict,
-        "world cities": world_city_dict,
-        "movies": movies_dict,
-        "tv shows": tv_show_dict,
-        "brands": brands_dict,
-        "disney": disney_dict
+        "celebrities": list(celebrity_dict.items()),
+        "world cities": list(world_city_dict.items()),
+        "movies": list(movies_dict.items()),
+        "tv shows": list(tv_show_dict.items()),
+        "brands": list(brands_dict.items()),
+        "disney": list(disney_dict.items())
         }   
     
-    print("🌟🌟🌟Welcome to the emoji quiz!🌟🌟🌟")
+    score = 0
+    
+    print("🌟🌟🌟Welcome to The Emoji Quiz!🌟🌟🌟")
     print("""
         ✨🌌💫 Instructions 🤍☁️🌿
           You will first get to choose which topics you'd like out of:
@@ -43,14 +45,65 @@ def main():
           - Correct answer on 2nd guess - 2 points
           - Correct answer on 3rd guess - 1 point
 
-          If you fail to get the correct answer after three tries, the game ends and you receive your final score!
+          If you fail to get the correct answer after three tries, you get 0 points for that round!
 
           The game will randomly select how many questions will be in your quiz, and if you reach the end of those questions you will receive your final score!
 
           Good luck!
 
           """)
+    time.sleep(1)
+
+    topics_selected = make_selection(choices)
+
+    print()
+    print("You have chosen: ")
+    for topic in topics_selected:
+        print(topic.capitalize())
+    print()
+
+    print("Making your quiz...")
+    filtered_choice_to_question_dict = {}
+    for topic in topics_selected:
+        filtered_choice_to_question_dict[topic] = choice_to_question_dict_map[topic]
+    question_set = curate_question_set(random.randint(5, 10), filtered_choice_to_question_dict)
+    time.sleep(1)
+    print()
+
+    print("TIME TO QUIZ!!")
+    print("When you input your answer, make sure your spelling and any other characters are correct and in the right places as best as you can make them.")
     time.sleep(3)
+    print("Starting in 3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print()
+
+    for topic in question_set:
+        print(f"You are in the world of {topic}!")
+        for emoji, answer in question_set[topic]:
+            #user_ans = input(f"What do you think {emoji} means? --> ").title()
+            points = 3
+            while points > 0:
+                user_ans = input(f"What do you think {emoji} means? --> ").lower()
+                if user_ans == answer.lower():
+                    score += points
+                    print(f"Congrats! You answered correctly! You get an additional {points} points")
+                    break
+                else:
+                    print(f"Sorry, {user_ans} is incorrect. Check your answer carefully and try again.")
+                    points -=1
+            if points == 0:
+                print(f"Unlucky! The correct answer was {answer}. Better luck in the next question!")
+        print()
+
+    print("Congrats on making it to the end! You have a grand total of.... drumroll...")
+    time.sleep(3)
+    print(f"{score} points!!! Well done! Play again next time for a new ____ of The Emoji Quiz (not movie )")
+    print("Credits: The Cosmopolitan --> https://www.cosmopolitan.com/uk/entertainment/quizzes-games/a38311108/emoji-quiz-questions/")
+
     
 
 # print(celebrity_emojis)

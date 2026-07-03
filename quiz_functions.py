@@ -1,5 +1,4 @@
 import random
-import math
 
 
 def format_dict(dict):
@@ -32,19 +31,6 @@ def make_selection(dict_choice):
                                 
                                 Your selection --> 
                                 """))
-        # if select_topics == 0:
-        #     random_choice = random.choice(list(_dict_choice.keys())[1:])
-        #     topics_selected.append(_dict_choice[random_choice])
-        #     no_of_topics_selection -= 1
-        #     print(f"{_dict_choice[random_choice]} selected!")
-        #     _dict_choice.pop(random_choice)
-        # elif 1 <= select_topics <= len(_dict_choice):
-        #     topics_selected.append(_dict_choice[select_topics])
-        #     no_of_topics_selection -= 1
-        #     print(f"{_dict_choice[select_topics]} selected!")
-        #     _dict_choice.pop(select_topics)
-        # else:
-        #     print("Please enter a valid input.")
 
         if select_topics < 0 or select_topics >= len(_dict_choice):
             print(f"Please enter a valid input between 0 and {len(_dict_choice)}")
@@ -63,21 +49,18 @@ def make_selection(dict_choice):
     return topics_selected
 
 
-def curate_question_set(no_of_questions, **kwargs): 
+def curate_question_set(no_of_questions, quiz_dicts): 
     #kwargs is a key, value dict; value is list of key, value pairs
     question_set = {}
-    for topic in kwargs.keys():
+    for topic in quiz_dicts.keys():
         question_set[topic] = []
     while no_of_questions > 0:
-        random_topic = random.choice(list(kwargs.keys()))
-        question_set[random_topic].append(random.choice(kwargs[random_topic]))
+        random_topic = random.choice(list(quiz_dicts.keys()))
+        random_topic_question_ans = random.choice(quiz_dicts[random_topic])
+        question_set[random_topic].append(random_topic_question_ans)
         no_of_questions -= 1
+        quiz_dicts[random_topic].remove(random_topic_question_ans)
     return question_set
 
-def select_topic():
-    pass
-
-def ask_question():
-    pass
 
 

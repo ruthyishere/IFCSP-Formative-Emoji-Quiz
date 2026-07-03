@@ -1,6 +1,6 @@
 celebrity_dict = {
     "🤱🚦 🚣 🐝": "Margot Robbie",
-    "🐝🔛🌊": "Beyoncé",
+    "🐝🔛🌊": "Beyonce",
     "🐻 👧👧": "Bear Grylls",
     "🎭 🏆🍟": "Oprah Winfrey",
     "🥤🥫 🐝🥶": "Justin Bieber",
@@ -27,7 +27,7 @@ world_city_dict = {
     "🚗🐂": "Kabul",
     "🚢 👄": "Portsmouth",
     "🔥": "Bern",
-    "🏅📥": "Medellín",
+    "🏅📥": "Medellin",
     "😂🚐🅰️": "Havana",
     "☀️ 😒👭🚘": "San Francisco",
     "📖🅰️😴": "Bucharest",
