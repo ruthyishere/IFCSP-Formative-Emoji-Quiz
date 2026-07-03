@@ -1,11 +1,12 @@
-# get quiz from --> https://www.cosmopolitan.com/uk/entertainment/quizzes-games/a38311108/emoji-quiz-questions/
-# Max three goes! 
-import random 
-from emoji_dicts import celebrity_dict, world_city_dict, movies_dict, tv_show_dict, brands_dict, disney_dict
-from quiz_functions import curate_question_set, make_selection
-import time
+import random # Helps with randomly selecting the number of questions
+from emoji_dicts import celebrity_dict, world_city_dict, movies_dict, tv_show_dict, brands_dict, disney_dict # importing the dictionaries that store the emojis and their corresponding answers
+from quiz_functions import curate_question_set, make_selection # Helps with the selection and curation of the questions set 
+import time # To space out all the print statement outputs 
 
 def main():
+    # Runs the main program for the quiz
+
+    # Dicts to help manage choice of which topics, and final score variable initialisation
     choices = {
         0: "random choice",
         1: "celebrities",
@@ -27,6 +28,7 @@ def main():
     
     score = 0
     
+    # Start of the introduction to the quiz
     print("🌟🌟🌟Welcome to The Emoji Quiz!🌟🌟🌟")
     print("""
         ✨🌌💫 Instructions 🤍☁️🌿
@@ -54,6 +56,7 @@ def main():
           """)
     time.sleep(1)
 
+    # Uses quiz_functions to guide the user into selecting their chosen quiz topics.
     topics_selected = make_selection(choices)
 
     print()
@@ -62,6 +65,7 @@ def main():
         print(topic.capitalize())
     print()
 
+    # Curates the question set for the quiz
     print("Making your quiz...")
     filtered_choice_to_question_dict = {}
     for topic in topics_selected:
@@ -70,7 +74,7 @@ def main():
     time.sleep(1)
     print()
 
-    print("TIME TO QUIZ!!")
+    print("TIME TO QUIZ!! 📝📝📝")
     print("When you input your answer, make sure your spelling and any other characters are correct and in the right places as best as you can make them.")
     time.sleep(3)
     print("Starting in 3...")
@@ -81,45 +85,29 @@ def main():
     time.sleep(1)
     print()
 
+    # Ask questions to user, output is converted to lowercase and compared to lowercase answer. The more guesses they have, the less points they get.
     for topic in question_set:
-        print(f"You are in the world of {topic}!")
+        print(f"You are in the world of 🌟{topic}🌟!")
         for emoji, answer in question_set[topic]:
-            #user_ans = input(f"What do you think {emoji} means? --> ").title()
             points = 3
             while points > 0:
                 user_ans = input(f"What do you think {emoji} means? --> ").lower()
                 if user_ans == answer.lower():
                     score += points
-                    print(f"Congrats! You answered correctly! You get an additional {points} points")
+                    print(f"Congrats! 🎉 You answered correctly! You get an additional {points} points")
                     break
                 else:
                     print(f"Sorry, {user_ans} is incorrect. Check your answer carefully and try again.")
                     points -=1
             if points == 0:
-                print(f"Unlucky! The correct answer was {answer}. Better luck in the next question!")
+                print(f"Unlucky! 😩 The correct answer was {answer}. Better luck in the next question!")
         print()
 
     print("Congrats on making it to the end! You have a grand total of.... drumroll...")
     time.sleep(3)
-    print(f"{score} points!!! Well done! Play again next time for a new ____ of The Emoji Quiz (not movie )")
+    print(f" 🎉 {score} points!!! Well done! 🥳 Play again next time!")
+    time.sleep(1)
     print("Credits: The Cosmopolitan --> https://www.cosmopolitan.com/uk/entertainment/quizzes-games/a38311108/emoji-quiz-questions/")
-
-    
-
-# print(celebrity_emojis)
-# for key in celebrity_emojis:
-#     print(key)
-
-# print(random.choice(list(celebrity_emojis.items())))
-
-# params = {"celebrity_emojis": list(celebrity_emojis.items())}
-
-# question_set = curate_question_set(no_of_questions=5, **params)
-# print(question_set)
-
-
-
-# topics = make_selection(params)
-# print(topics)
+    time.sleep(5)
 
 main()

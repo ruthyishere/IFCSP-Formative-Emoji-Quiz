@@ -2,13 +2,14 @@ import random
 
 
 def format_dict(dict):
-    # number --> topic name
+    # prints out all key value pairs in a dictionary as "key --> value"
     return "\t\n".join(f"{key} --> {value}" for key,value in dict.items())
 
 def make_selection(dict_choice):
-    # number --> topic name
+    # Uses quiz_functions to guide the user into selecting their chosen quiz topics
+
     while True:
-        ## add in try, except
+        ## Asks how many topics they would like covered in the quiz.
         no_of_topics_selection = int(input("""
                             How many topics would you like? You can choose up to three or let the game randomly decide.
                             Enter 1 - 3 for the number of topics or 4 to let the game decide -->
@@ -23,7 +24,9 @@ def make_selection(dict_choice):
 
     topics_selected = []
     _dict_choice = dict_choice.copy()
+
     while no_of_topics_selection > 0:
+        # Asks for the specific topics user would like to see in quiz
         select_topics = int(input(f"""
                                 Which topic would you like to select from? You have the following options to choose from.
                                 Input the corresponding value for the topic as seen below.
@@ -50,7 +53,8 @@ def make_selection(dict_choice):
 
 
 def curate_question_set(no_of_questions, quiz_dicts): 
-    #kwargs is a key, value dict; value is list of key, value pairs
+    # randomly selects which topics and which questions in the topics chosen make it to the final set of questions
+    # values in quiz_dicts are lists of key, value tuple pairs
     question_set = {}
     for topic in quiz_dicts.keys():
         question_set[topic] = []

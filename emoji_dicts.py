@@ -1,3 +1,5 @@
+# Stores the emojis and their answers!
+
 celebrity_dict = {
     "🤱🚦 🚣 🐝": "Margot Robbie",
     "🐝🔛🌊": "Beyonce",
