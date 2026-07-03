@@ -36,4 +36,6 @@ The code uses a modular design:
 At the end of `main`, you will wait five seconds before the program terminates to make sure that any program pop up doesn't immediately shut down right after displaying the score.
 
 
+## Credits
 
+Credits for the emoji quiz content: The Cosmopolitan --> https://www.cosmopolitan.com/uk/entertainment/quizzes-games/a38311108/emoji-quiz-questions/
